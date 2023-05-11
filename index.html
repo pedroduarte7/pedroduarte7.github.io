@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+      <meta http-equiv="pragma" content="no-cache">
+      <meta http-equiv="expires" content="-1">
+      <title>Login Kroton</title>
+      <link rel="shortcut icon" href="https://login.kroton.com.br/Content/favicon.ico">
+      <link rel="stylesheet" media="screen" href="https://login.kroton.com.br/Content/css/bootstrap.min.css" />
+      <link rel="stylesheet" media="screen" href="https://login.kroton.com.br/Content/css/style.min.css?v6" />
+      <link rel="stylesheet" media="screen" href="https://login.kroton.com.br/Content/css/marca.min.css?v1" />
+      <style>
+         body.login-img-pa {
+         background-image: url('https://login.kroton.com.br/Content/img/kroton/login-pa.jpg');
+         }
+      </style>
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-7Y6BJ3NBV2"></script>
+      <script>
+         // Mudamos de gtag para gaV4 para não interferir no GTM do Marketing
+         window.dataLayer = window.dataLayer || [];
+         function gaV4() { dataLayer.push(arguments); }
+         gaV4('js', new Date());
+         gaV4('config', 'G-7Y6BJ3NBV2', {
+             
+         });
+         gaV4('consent', 'default', {
+             ad_storage: 'denied',
+             analytics_storage: 'granted',
+             ads_data_redaction: 'true',
+         });
+         gaV4('event', 'app', {
+             name: 'Login',
+             host: window.location.host,
+         });
+      </script>
+      <!-- Application Insights -->
+      <script type="text/javascript" async>
+         var appInsights = window.appInsights || function (config) {
+             function r(config) { t[config] = function () { var i = arguments; t.queue.push(function () { t[config].apply(t, i) }) } }
+             var t = { config: config }, u = document, e = window, o = 'script', s = u.createElement(o), i, f; for (s.src = config.url || '//az416426.vo.msecnd.net/scripts/a/ai.0.js', u.getElementsByTagName(o)[0].parentNode.appendChild(s), t.cookie = u.cookie, t.queue = [], i = ['Event', 'Exception', 'Metric', 'PageView', 'Trace', 'Ajax']; i.length;)r('track' + i.pop()); return r('setAuthenticatedUserContext'), r('clearAuthenticatedUserContext'), config.disableExceptionTracking || (i = 'onerror', r('_' + i), f = e[i], e[i] = function (config, r, u, e, o) { var s = f && f(config, r, u, e, o); return s !== !0 && t['_' + i](config, r, u, e, o), s }), t
+         }({
+             instrumentationKey: '5e77f82f-3d66-4718-b706-4e880cbe6420'
+         });
+         
+         window.appInsights = appInsights;
+         appInsights.trackPageView();
+      </script>
+      <!-- ReCaptcha -->
+      <script src="https://www.google.com/recaptcha/api.js?onload=recaptcha&render=explicit" async></script>
+      <!-- HubSpot Embed Code -->
+      <script type="text/javascript" id="hs-script-loader" async defer src="https://js.hs-scripts.com/8726768.js"></script>
+      <!-- Google Tag Manager -->
+      <script>
+         (function (w, d, s, l, i) {
+             w[l] = w[l] || []; w[l].push({
+                 'gtm.start':
+                     new Date().getTime(), event: 'c.js'
+             });
+             var f = d.getElementsByTagName(s)[0],
+                 j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+         })(window, document, 'script', 'dataLayer', 'GTM-PW2D5RS');
+      </script>
+      <!-- End Google Tag Manager -->
+      <!-- App Dynamics -->
+      <script charset="UTF-8" type="text/javascript" async>
+         window["adrum-start-time"] = new Date().getTime();
+         (function (config) {
+             config.appKey = "AD-AAB-AAZ-XTN";
+             config.adrumExtUrlHttp = "http://cdn.appdynamics.com";
+             config.adrumExtUrlHttps = "https://cdn.appdynamics.com";
+             config.beaconUrlHttp = "http://pdx-col.eum-appdynamics.com";
+             config.beaconUrlHttps = "https://pdx-col.eum-appdynamics.com";
+             config.resTiming = { "bufSize": 200, "clearResTimingOnBeaconSend": true };
+             config.maxUrlLength = 512;
+         })(window["adrum-config"] || (window["adrum-config"] = {}));
+      </script>
+      <script src="//cdn.appdynamics.com/adrum/adrum-22.4.0.3721.js" async></script>
+   </head>
+   <body class="kroton login-img-pa" style="width: 100% !important;">
+      <div class="container-fluid">
+         <div class="row">
+            <div class="col-sm-6 col-lg-7">
+               <p>&nbsp;</p>
+            </div>
+            <div class="col-sm-6 col-lg-5">
+               <div class="row login">
+                  <div class="logo text-center">
+                     <img src="https://login.kroton.com.br/Content/img/kroton/logopa.png" style="width: 90%" />
+                  </div>
+                  <div class="col-xs-12">
+                     <h4 style="margin-top: 25px;">Bem-vindo aluno!</h4>
+                     <input type="hidden" id="hidError" name="hidError" />
+                     <div class="alert alert-danger js-alert" style="display:none"></div>
+                     <div class="alert alert-warning" style="display: none" id="trb">
+                        <i class="glyphicon glyphicon-exclamation-sign"></i>&nbsp;
+                        Está tendo problemas com seu login? 
+                        <a class="alert-link" href="/AccountAluno/AccountTrouble">Clique aqui</a>
+                     </div>
+    
+                        <div class="form-group marca-sec-texto" data-icon="p">
+                           <input type="text" id="username" name="username" class="form-control" placeholder="CPF, RA ou e-mail..." value="" maxlength="150" autocomplete="username">
+                        </div>
+                        <div class="form-group marca-sec-texto" data-icon="l">
+                           <input type="password" id="password" name="password" class="form-control" placeholder="Senha" value="" maxlength="16" autocomplete="current-password">
+                        </div>
+                        <div class="form-group">
+                           <span style="margin-top:10px">
+                           <label for="checkbox">
+                           <input type="checkbox" id="checkbox" name="lembrarMe" />
+                           &nbsp;Salvar dados
+                           </label>
+                           </span>
+                        </div>
+                        <p class="clearfix">
+                           <a href="/AccountAluno/AccountResetPassword" class="marca-link js-acesso">Esqueci minha senha / Primeiro acesso</a>
+                        </p>
+                        <div class="form-group padT">
+                            <button type="button" name="submit.Signin" id="btnLogin" class="btn marca-btn" onclick="window.location.href = '/AccountAluno/index.html'">
+                                <span class="glyphicon glyphicon-log-in"></span>&nbsp;
+                                Entrar
+                              </button>
+                              
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="privacy-bar" id="privacyBar">
+         <p class="privacy-bar-text col-sm-11 col-xs-12">Esse site utiliza cookies para oferecer uma melhor experiência de navegação, analisar como você interage em nosso site, otimizar o desempenho e personalizar o conteúdo. Ao utilizar este site, você concorda com o uso de cookies. Saiba mais em nosso <a href="https://www.canaldatransparencia.com.br/cogna" target="_blank" id="portal-link">Portal de Privacidade</a>.</p>
+         <div class="privacy-bar-button-box col-sm-1 col-xs-12">
+            <button type="submit" onclick="HidePrivacyBar();" id="privacyBarButton" class="btn privacy-bar-button">Ok</button>
+         </div>
+      </div>
+      <div class="barra text-center navbar-fixed-bottom">
+         <a href="#" class="marca-bg" target="_blank">
+         <img src="https://login.kroton.com.br/Content/graph/icon_face.png">
+         </a>
+         <a href="#" class="marca-bg" target="_blank">
+         <img src="https://login.kroton.com.br/Content/graph/icon_twitter.png">
+         </a>
+         <a href="#" class="marca-bg" target="_blank">
+         <img src="https://login.kroton.com.br/Content/graph/icon_youtube.png">
+         </a>
+      </div>
+      <script src="/Content/js/jquery-2.2.0.min.js"></script>
+      <script src="/Content/js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fingerprintjs2/2.1.0/fingerprint2.min.js" async defer></script>
+      <script type="text/javascript" defer>
+         if (Fingerprint2) {
+             setTimeout(function () {
+                 Fingerprint2.get(function (c) {
+                     var hash = Fingerprint2.x64hash128(c.map(function (p) { return p.value }).join(), 31);
+                     $.get('/Account/FingerPrint/' + hash);
+                 });
+             }, 750);
+         }
+      </script>
+      <script type="text/javascript">
+         var captchaKey = '6LfWaq4UAAAAALNxhDC-9hF4ypTi1U3yOfc8iyuu';
+      </script>
+      <script type="text/javascript" src="https://login.kroton.com.br/Content/js/jquery.maskedinput.js"></script>
+      <script type="text/javascript" src="https://login.kroton.com.br/Content/js/loginpa.min.js?v13"></script>
+      <script type="text/javascript">
+         var button = document.getElementById('privacyBarButton');
+         function HidePrivacyBar() {
+           var div = document.getElementById('privacyBar');
+           div.innerHTML = '';
+           div.style.display = 'none';
+         }
+         button.addEventListener('click', function (event) {
+           event.preventDefault();
+           HidePrivacyBar();
+         });
+      </script>
+      <!-- Google Tag Manager (noscript) -->
+      <noscript>
+         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PW2D5RS"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+      </noscript>
+      <!-- End Google Tag Manager (noscript) -->
+   </body>
+</html>
